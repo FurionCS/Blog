@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.stereotype.Service;
 
 import com.Blog.Bean.Article;
 import com.Blog.Service.ArticleService;
 
+@Service
 public class ArticleDao extends BaseDao{
 	public List<Article> getAll(){
 		String hql="FROM Article";

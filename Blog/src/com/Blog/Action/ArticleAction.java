@@ -11,12 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import net.sf.json.JSONObject;
 
 import org.apache.struts2.interceptor.ServletResponseAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import com.Blog.Bean.Article;
 import com.Blog.Bean.Page;
 import com.Blog.Service.ArticleService;
 import com.opensymphony.xwork2.ActionSupport;
 
+
+@Controller
 public class ArticleAction extends ActionSupport implements ServletResponseAware{
 	private Article article;
 	public Article getArticle() {
@@ -32,6 +37,7 @@ public class ArticleAction extends ActionSupport implements ServletResponseAware
 	public void setPage(Page page) {
 		this.page = page;
 	}
+	@Autowired
 	private ArticleService articleService;
 	public void setArticleService(ArticleService articleService) {
 		this.articleService = articleService;

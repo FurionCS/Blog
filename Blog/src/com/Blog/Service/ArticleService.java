@@ -2,10 +2,16 @@ package com.Blog.Service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.Blog.Bean.Article;
 import com.Blog.Dao.ArticleDao;
 
+
+@Service
 public class ArticleService {
+	@Autowired
 	private ArticleDao articleDao;
 	public void setArticleDao(ArticleDao articleDao) {
 		this.articleDao = articleDao;
