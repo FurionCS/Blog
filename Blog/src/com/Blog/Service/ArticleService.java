@@ -13,9 +13,6 @@ import com.Blog.Dao.ArticleDao;
 public class ArticleService {
 	@Autowired
 	private ArticleDao articleDao;
-	public void setArticleDao(ArticleDao articleDao) {
-		this.articleDao = articleDao;
-	}
 	public List<Article> getAll(){
 		return articleDao.getAll();
 	}

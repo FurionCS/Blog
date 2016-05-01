@@ -39,9 +39,6 @@ public class ArticleAction extends ActionSupport implements ServletResponseAware
 	}
 	@Autowired
 	private ArticleService articleService;
-	public void setArticleService(ArticleService articleService) {
-		this.articleService = articleService;
-	}
 	public String list() throws IOException{
 		List<Article> la=articleService.getArticleByPage(page.getOrderby(), page.getStrWhere(),page.getPageSize(), page.getPageIndex());
 		response.setCharacterEncoding("utf-8");
