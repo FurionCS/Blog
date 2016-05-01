@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+	<package name="main" extends="struts-default">
+		<action name="article-*" class="articleAction" method="{1}">
+			<result name="success" type="redirect">FaceBlog/index.jsp</result>
+			<result name="info" type="redirect">FaceBlog/Article.jsp</result>
+		</action>
+	</package>
+</struts>

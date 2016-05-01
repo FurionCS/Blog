@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.Blog.Bean">
+	<class name="Article" table="T_BLOG_ARTICLE">
+		 <cache usage="read-write"/>
+		 <id name="aid" type="java.lang.Integer"><column name="AID"></column> <generator class="native" /></id>
+		 <property name="atitle"  type="string" length="100"><column name="ATITLE"></column></property>
+		 <property name="acontent"  type="string" length="4000"><column name="ACONTENT"></column></property> 
+		 <property name="atabone" type="string" length="20"><column name="ATABONE"></column></property>
+		 <property name="atabtwo"  type="string" length="20"><column name="ATABTWO"></column></property>
+		 <property name="atabthree"  type="string" length="20"><column name="ATABTHREE"></column></property>   
+		 <property name="apublishtime"  type="timestamp"><column name="APUBLISHTIME"></column></property>  
+		 <property name="acount"  type="java.lang.Integer"><column name="ACOUNT"></column></property>      
+	</class>
+</hibernate-mapping>

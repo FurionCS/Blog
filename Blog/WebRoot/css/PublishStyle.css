@@ -1,0 +1,58 @@
+#themeDiv{
+	margin:20px;
+}
+#theme{
+	background-color:rgb(234,234,234);
+	border:1px solid #ccc;
+	padding:3px 10px;
+	border-radius:4px;
+	outline: none;
+}
+#pub{
+	float: right;
+	background-color:rgb(234,234,234);
+	border:1px solid #ccc;
+	color:#000;
+	padding:3px 10px;
+	border-radius:3px;
+	letter-spacing: 3px;
+	
+}
+#pub:hover{
+	background-color:rgb(220,220,220);
+}
+.tags{
+	position: absolute;
+	bottom: 0;
+	width:100px;
+	opacity:0; 
+}
+#tags2{left:100px;}
+#tags3{left:200px;}
+
+
+#tagslist{
+	position: absolute;
+	bottom:0;
+}
+.article-tag{
+	margin-top:-30px;
+}
+.tagcloud{
+	margin-left:10px;
+}
+#tagslist a{
+	color:#ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
