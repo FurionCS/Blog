@@ -2,6 +2,18 @@ package com.Blog.Bean;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Type;
+
+@Entity
+@Table(name="T_BLOG_ARTICLE")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE) 
 public class Article {
 	private int aid;
 	private String atitle;
@@ -11,6 +23,8 @@ public class Article {
 	private String atabthree;
 	private Date apublishtime;
 	private int acount;
+	@Id
+	@GeneratedValue
 	public int getAid() {
 		return aid;
 	}
@@ -54,7 +68,7 @@ public class Article {
 	public void setAtabthree(String atabthree) {
 		this.atabthree = atabthree;
 	}
-
+	@Type(type="timestamp")
 	public Date getApublishtime() {
 		return apublishtime;
 	}
