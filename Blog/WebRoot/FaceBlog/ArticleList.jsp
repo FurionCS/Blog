@@ -84,8 +84,7 @@
               
             });
 		}
-		function GetPageInfo(count) {
-	        
+		function GetPageInfo(count) {	        
             var pageHtml = "";
             if (count != 0) {
                 recordCount = count;
